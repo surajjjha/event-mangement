@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './EventList.css'; 
 import EventDetail from './EventDetail';
-
+const url="https://event-mangement-ptas.onrender.com"
 
 
 const fetchEvents = async () => {
       try {
-        const response = await fetch('http://localhost:5000/events');
+        const response = await fetch(url+'/events');
         const data = await response.json();
         return data;
       } catch (error) {
