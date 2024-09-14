@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './EventDetail.css'; 
 import Signup from './Signup'; 
-const url="https://event-mangement-ptas.onrender.com"
 
 const EventDetail = ({ event, goBack }) => {
   const [rsvpStatus, setRsvpStatus] = useState('Not Responded');
@@ -37,7 +36,7 @@ const EventDetail = ({ event, goBack }) => {
 
   const fetchAttendees = async () => {
     try {
-      const response = await fetch(url+`/events/${event.id}/attendees`);
+      const response = await fetch(`http://localhost:5000/events/${event.id}/attendees`);
       const data = await response.json();
       setAttendees(data.attendees || []); 
       setAttendeesCount(data.count || 0); 
