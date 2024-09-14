@@ -1,0 +1,58 @@
+.container {
+    padding: 20px;
+    background-color: #fff;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .detail {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .rsvp-status {
+    font-size: 16px;
+    margin: 20px 0;
+    color: #007bff;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button {
+    background-color: #007bff;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    margin: 0 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  

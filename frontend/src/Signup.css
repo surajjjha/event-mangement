@@ -1,0 +1,105 @@
+/* Existing CSS styles */
+
+.signup-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+}
+
+.signup-heading {
+  text-align: center;
+  color: #333;
+}
+
+.signup-input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.signup-buttons-container {
+  text-align: center;
+}
+
+.signup-toggle-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.signup-toggle-button:hover {
+  background-color: #0056b3;
+}
+
+.signup-confirm-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-confirm-button:hover {
+  background-color: #218838;
+}
+
+.signup-attendees-heading {
+  margin-top: 20px;
+  color: #333;
+}
+
+.signup-attendees-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.signup-attendee-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.signup-total-attendees {
+  text-align: center;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* New styles for RSVP buttons */
+
+.signup-rsvp-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.signup-rsvp-button.attending {
+  background-color: #28a745;
+}
+
+.signup-rsvp-button.not-attending {
+  background-color: #dc3545;
+}
+
+.signup-rsvp-button:hover {
+  opacity: 0.9;
+}
