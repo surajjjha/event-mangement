@@ -9,12 +9,12 @@ const Signup = () => {
   const [eventId, setEventId] = useState(null);
   const [events, setEvents] = useState([]);
   const [attendees, setAttendees] = useState([]);
-
+  const url="https://event-mangement-ptas.onrender.com"
   // Fetch events from the server
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('http://localhost:5000/events');
+        const response = await fetch(url+'/events');
         const data = await response.json();
         setEvents(data);
         if (data.length > 0) {
@@ -32,7 +32,7 @@ const Signup = () => {
   const fetchAttendees = async () => {
     if (eventId) {
       try {
-        const response = await fetch(`http://localhost:5000/events/${eventId}/attendees`);
+        const response = await fetch(url+`/events/${eventId}/attendees`);
         const data = await response.json();
        
         setAttendees((data.attendees || []).filter(Boolean));
@@ -53,7 +53,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/events/${eventId}/attendees`, {
+      const response = await fetch(url+`/events/${eventId}/attendees`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
