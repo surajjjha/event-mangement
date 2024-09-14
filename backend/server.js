@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+require('dotenv').config(); 
 
 const app = express();
 const port = 5000;
@@ -11,12 +12,18 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://surajkumar12244:Anukumari1@cluster0.7wspf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+const mongoUri = process.env.MONGO_URI;
+
+mongoose.connect(mongoUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.log(err));
+.then(() => {
+  console.log('Connected to MongoDB');
+})
+.catch((err) => {
+  console.error('Error connecting to MongoDB:', err);
+});
 
 // Event schema and model
 const eventSchema = new mongoose.Schema({
